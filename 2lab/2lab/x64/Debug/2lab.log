@@ -1,0 +1,12 @@
+﻿  2lab.c
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(65,12): warning C4013: sum: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(66,14): warning C4013: printmat: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(70,10): warning C4013: plus: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(91,20): warning C4013: if_kolvo: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(82,51): warning C4101: k: неиспользованная локальная переменная
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(162,6): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(190,13): warning C4101: res: неиспользованная локальная переменная
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(46): warning C4716: srav: должна возвращать значение
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(100): warning C4716: plus: должна возвращать значение
+C:\Users\HP\Desktop\2lab\2lab\2lab\2lab.c(140): warning C4716: printmat: должна возвращать значение
+  2lab.vcxproj -> C:\Users\HP\Desktop\2lab\2lab\x64\Debug\2lab.exe

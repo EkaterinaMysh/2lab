@@ -79,14 +79,18 @@ int recurs(int slag, int digit)
 
 int plus()
 {
-	int i = 7, i1=number_of_sum, j=digits_num[i][0], k;
+	int i = 7, i1=number_of_sum, j=digits_num[i][0], k, flag=1 ;
 	try :
 	if (digits_num[i][j] != 9)
 		{
 			digits_num[i][j]++; srav(digits_num[i][j], i, j);
 		}
 	else {
-		if (j == 1) { digits_num[i][1] = 1; srav(digits_num[i][1], i, 1); if (i == 7) i = number_of_sum;  i--; j = digits_num[i][0]; goto try; }
+		if (j == 1) { 
+			if (i == (number_of_sum - 1) && (digits[0][0] != digits[7][0]) && (digits[1][0] != digits[7][0])) 
+				flag = if_kolvo(flag); 
+			else { digits_num[i][1] = 1; } srav(digits_num[i][1], i, 1); 
+			if (i == 7) i = number_of_sum;  i--; j = digits_num[i][0]; goto try; }
 		else if (j != 1) { digits_num[i][j] = 0; srav(digits_num[i][1], i, 1); j--; goto try; }
 		else {
 			digits_num[i][j] = 1; srav(digits_num[i][j], i, j);goto try;
@@ -95,6 +99,31 @@ int plus()
 
 }
 
+int already_used = 0;
+
+int if_kolvo(int flag)
+{
+	int i = 0; int j = 1;
+	if (number_of_sum == 2) if ((digits[0][0] != digits[7][0]) && (digits[1][0] != digits[7][0]))
+	{
+		if (already_used != 0) {
+			i = j; j = 0; already_used = 0;
+		}
+		if (flag != 6)
+		{
+			digits_num[i][1] = 10 - flag;
+			digits_num[j][1] = flag;
+			flag++;
+			already_used++;
+		}
+		else {
+			digits_num[i][1] = flag;
+			digits_num[j][1] = flag;
+			flag++;
+		}
+	}
+	return flag;
+}
 
 int printmat()
 {
